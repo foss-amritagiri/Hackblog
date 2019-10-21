@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Posts - Hacktoberfest Blog</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link href="hackblog.netlify.com/an-old-hope.min.css" rel="stylesheet">
+    <link href="hackblog.netlify.com/style.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="hackblog.netlify.com/apple-touch-icon.png">
+    <link rel="icon" href="hackblog.netlify.com/favicon.ico">
+    
+    <meta name="generator" content="Hugo 0.59.0" />
+    
+    <link rel="alternate" type="application/atom+xml" href="hackblog.netlify.com/index.xml" title="Hacktoberfest Blog">
+    
+    
+    
+    <script>
+      function setTheme() {
+        const time = new Date();
+
+        const prev = localStorage.getItem('date');
+        const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+
+        const now = time.getTime();
+        let sunrise;
+        let sunset;
+
+        function setBodyClass() {
+          if (now > sunrise && now < sunset) return;
+          document.body.classList.add('dark');
+        }
+
+        if (date !== prev) {
+          fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+            .then(res => res.json())
+            .then(data => {
+              sunrise = data.sunrise.split(':').map(Number);
+              sunset = data.sunset.split(':').map(Number);
+            })
+            .catch(() => {
+              sunrise = [7, 0];
+              sunset = [19, 0];
+            })
+            .finally(() => {
+              sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+              sunset = time.setHours(sunset[0], sunset[1], 0);
+              setBodyClass();
+              localStorage.setItem('sunrise', sunrise);
+              localStorage.setItem('sunset', sunset);
+            });
+          localStorage.setItem('date', date);
+        } else {
+          sunrise = Number(localStorage.getItem('sunrise'));
+          sunset = Number(localStorage.getItem('sunset'));
+          setBodyClass();
+        }
+      }
+    </script>
+  </head>
+  <body class="list">
+    <script>
+      setTheme();
+    </script>
+    <header class="header">
+      <nav class="nav">
+        
+        <p class="logo"><a href="hackblog.netlify.com">Hacktoberfest Blog</a></p>
+        
+        
+      </nav>
+    </header>
+    <main class="main">
+
+
+
+
+
+<header class="page-header">
+  <h1>Posts</h1>
+</header>
+
+
+
+
+
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>My Experience on Hacktoberfest</h2>
+  </header>
+  <section class="entry-content">
+   <p>I need badge please...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>October 21, 2019</time>
+  </footer>
+  <a class="entry-link" href="hackblog.netlify.com/posts/my_experience/"></a>
+</article>
+
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>Hacktoberfest</h2>
+  </header>
+  <section class="entry-content">
+   <p>Hello world...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>October 21, 2019</time>
+  </footer>
+  <a class="entry-link" href="hackblog.netlify.com/posts/hacktoberfest/"></a>
+</article>
+
+
+
+
+
+</main>
+<footer class="footer">
+  <span>&copy; 2019 <a href="hackblog.netlify.com">Hacktoberfest Blog</a></span>
+  <span>&middot;</span>
+  <span>Maintained by <a href="https://agfoss.tech" rel="noopener" target="_blank">Foss@Amritagiri️</a></span>
+  <span>&middot;</span>
+</footer>
+<script src="hackblog.netlify.com/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

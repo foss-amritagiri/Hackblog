@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacktoberfest Blog</title>
+    <link>hackblog.netlify.com/</link>
+    <description>Recent content on Hacktoberfest Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2019 20:55:03 +0530</lastBuildDate>
+    
+	<atom:link href="hackblog.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Experience on Hacktoberfest</title>
+      <link>hackblog.netlify.com/posts/my_experience/</link>
+      <pubDate>Mon, 21 Oct 2019 20:55:03 +0530</pubDate>
+      
+      <guid>hackblog.netlify.com/posts/my_experience/</guid>
+      <description>I need badge please</description>
+    </item>
+    
+    <item>
+      <title>Hacktoberfest</title>
+      <link>hackblog.netlify.com/posts/hacktoberfest/</link>
+      <pubDate>Mon, 21 Oct 2019 20:44:01 +0530</pubDate>
+      
+      <guid>hackblog.netlify.com/posts/hacktoberfest/</guid>
+      <description>Hello world</description>
+    </item>
+    
+  </channel>
+</rss>
