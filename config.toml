@@ -1,4 +1,4 @@
-baseURL = "hackblog.netlify.com"
+baseURL = "https://hackblog.netlify.com"
 languageCode = "en-us"
 title = "Hacktoberfest Blog"
 theme = "hugo-paper"
